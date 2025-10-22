@@ -1,0 +1,44 @@
+/* CSS Reset (modern minimal) */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: #0f172a; background: #f8fafc; }
+
+/* Layout */
+.container { max-width: 720px; margin: 0 auto; padding: 24px; }
+.card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 10px 25px rgba(2, 6, 23, 0.08); border: 1px solid #e2e8f0; }
+
+/* Typography */
+.h1 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; letter-spacing: -0.02em; margin: 0; }
+.muted { color: #64748b; }
+
+/* Controls */
+.input { width: 100%; padding: 12px 14px; border: 1px solid #cbd5e1; border-radius: 10px; outline: none; font-size: 16px; transition: box-shadow 120ms ease, border-color 120ms ease; background: #f8fafc; }
+.input:focus { border-color: #6366f1; box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12); background: #fff; }
+
+.button { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #cbd5e1; background: #ffffff; color: #0f172a; padding: 10px 14px; border-radius: 10px; cursor: pointer; transition: background 120ms ease, border-color 120ms ease, transform 60ms ease; }
+.button:hover { background: #f1f5f9; border-color: #94a3b8; }
+.button:active { transform: translateY(1px); }
+.button.primary { border-color: #6366f1; background: #6366f1; color: white; }
+.button.danger { border-color: #ef4444; color: #b91c1c; background: #fff1f2; }
+
+/* Todo list */
+.todo-item { display: grid; grid-template-columns: 28px 1fr auto; gap: 12px; align-items: center; padding: 12px; border-radius: 10px; border: 1px solid #e2e8f0; background: #ffffff; }
+.todo-item + .todo-item { margin-top: 10px; }
+.todo-text { word-break: break-word; }
+.todo-text.completed { color: #64748b; text-decoration: line-through; }
+.checkbox { width: 18px; height: 18px; accent-color: #6366f1; }
+.actions { display: flex; gap: 8px; }
+
+/* Toolbar */
+.toolbar { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-top: 16px; }
+.filters { display: inline-flex; gap: 8px; }
+.filter { padding: 8px 12px; border-radius: 999px; border: 1px solid #cbd5e1; background: #ffffff; cursor: pointer; font-size: 14px; }
+.filter.active { background: #eef2ff; border-color: #6366f1; color: #3730a3; }
+
+/* Footer */
+.footer { margin-top: 20px; color: #94a3b8; font-size: 14px; text-align: center; }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .actions { width: 100%; justify-content: flex-end; }
+}
